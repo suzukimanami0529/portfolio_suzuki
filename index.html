@@ -8,6 +8,10 @@
     <title>MANAMI PORTFOLIO</title>
     <meta name="description" content="すずきまなみポートフォリオ">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 <body>
@@ -64,7 +68,24 @@
                     <h3>制作実績</h3>
                 </div>
                 <div>
-                    <img src="" alt="">
+                    <div>
+                        <picture>
+                            <source srcset="" media="(max-width:767px)">
+                            <img src="" alt="">
+                        </picture>
+                    </div>
+                    <div>
+                        <picture>
+                            <source srcset="" media="(max-width:767px)">
+                            <img src="" alt="">
+                        </picture>
+                    </div>
+                    <div>
+                        <picture>
+                            <source srcset="" media="(max-width:767px)">
+                            <img src="" alt="">
+                        </picture>
+                    </div>
                 </div>
             </section>
 
@@ -113,29 +134,41 @@
                         <h4><img src="imges/contents-title_skill.png" alt="skill"></h4>
                         <div class="skill--skill__underline"></div>
                         <ul>
-                            <li class="skill--skill__ps">
+                            <li>
                                 <p>Photoshop</p>
-                                <div></div>
+                                <div class="skill--skill__bar">
+                                    <div class="skill--skill__ps"></div>
+                                </div>
                             </li>
-                            <li class="skill--skill__ai">
+                            <li>
                                 <p>Illustrater</p>
-                                <div></div>
+                                <div class="skill--skill__bar">
+                                    <div class="skill--skill__ai"></div>
+                                </div>
                             </li>
-                            <li class="skill--skill__html">
+                            <li>
                                 <p>HTML</p>
-                                <div></div>
+                                <div class="skill--skill__bar">
+                                    <div class="skill--skill__html"></div>
+                                </div>
                             </li>
-                            <li class="skill--skill__css">
+                            <li>
                                 <p>CSS</p>
-                                <div></div>
+                                <div class="skill--skill__bar">
+                                    <div class="skill--skill__css"></div>
+                                </div>
                             </li>
-                            <li class="skill--skill__pr">
+                            <li>
                                 <p>Premiere Pro</p>
-                                <div></div>
+                                <div class="skill--skill__bar">
+                                    <div class="skill--skill__pr"></div>
+                                </div>
                             </li>
-                            <li class="skill--skill__ae">
+                            <li>
                                 <p>After Effects</p>
-                                <div></div>
+                                <div class="skill--skill__bar">
+                                    <div class="skill--skill__ae"></div>
+                                </div>
                             </li>
                         </ul>
                     </div>
@@ -173,12 +206,12 @@
                     <p>お仕事の依頼・こんなことできますか？というご相談などお気軽にどうぞ。</p>
                 </div>
                 <form action="">
-                    <div>
+                    <div class="contact--form">
                         <dl>
                             <label>
                                 <dt><span>必須</span>お問い合わせ内容</dt>
                                 <dd>
-                                    <input type="text" name="data" required>
+                                    <input type="text" class="contact--form__input" name="data" required>
                                 </dd>
                             </label>
                         </dl>
@@ -186,7 +219,7 @@
                             <label>
                                 <dt><span>必須</span>お名前</dt>
                                 <dd>
-                                    <input type="text" name="name" required>
+                                    <input type="text" class="contact--form__input" name="name" required>
                                 </dd>
                             </label>
                         </dl>
@@ -194,7 +227,7 @@
                             <label>
                                 <dt><span>必須</span>メールアドレス</dt>
                                 <dd>
-                                    <input type="text" name="e-mail" required>
+                                    <input type="text" class="contact--form__input" name="e-mail" required>
                                 </dd>
                             </label>
                         </dl>
@@ -202,7 +235,7 @@
                             <label>
                                 <dt><span>必須</span>電話番号</dt>
                                 <dd>
-                                    <input type="text" name="tel" required>
+                                    <input type="text" class="contact--form__input" name="tel" required>
                                 </dd>
                             </label>
                         </dl>
@@ -210,7 +243,8 @@
                             <label>
                                 <dt>ご要望・ご質問など</dt>
                                 <dd>
-                                    <input type="text" name="youbou" required>
+                                    <input type="text" class="contact--form__inputTextArea"
+                                        id="contact--form__input__free" name="youbou" required>
                                 </dd>
                             </label>
                         </dl>
@@ -221,6 +255,7 @@
 
         </main>
     </div>
+
 
 </body>
 
