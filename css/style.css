@@ -73,6 +73,7 @@ body {
 .skill--title__text,
 .contact--title__text {
     margin: 0 auto 15px auto;
+    position: relative;
 }
 .works--title__text {
     width: 223px;
@@ -86,6 +87,84 @@ body {
 .contact--title__text {
     width: 283px;
 }
+.works--title__text:after,
+.service--title__text:after,
+.skill--title__text::after,
+.contact--title__text::after {
+    position: absolute;
+    content: "";
+    bottom: 30px;
+    left: -100px;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    transform: rotate(45deg);
+}
+.works--title__text span::after,
+.service--title__text span:after,
+.skill--title__text span::after,
+.contact--title__text span::after {
+    position: absolute;
+    content: "";
+    bottom: 10px;
+    left: -140px;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    transform: rotate(45deg);
+}
+.works--title__text::before,
+.service--title__text:before,
+.skill--title__text::before,
+.contact--title__text::before {
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    transform: rotate(45deg);
+}
+/* titleの幅＋140 */
+.works--title__text::before {
+    left: 373px;
+}
+.service--title__text:before {
+    left: 405px;
+}
+.skill--title__text::before {
+    left: 717px;
+}
+.contact--title__text::before {
+    left: 423px;
+}
+
+.works--title__text span::before,
+.service--title__text span:before,
+.skill--title__text span::before,
+.contact--title__text span::before {
+    position: absolute;
+    content: "";
+    bottom: -30px;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    transform: rotate(45deg);
+}
+/* titleの幅＋100 */
+.works--title__text span::before {
+    left: 323px;
+}
+.service--title__text span:before {
+    left: 365px;
+}
+.skill--title__text span::before {
+    left: 677px;
+}
+.contact--title__text span::before {
+    left: 383px;
+}
+
 h3 {
     font-size: 18px;
     text-align: center;
@@ -101,12 +180,12 @@ h3 {
 }
 
 /* header */
-nav ul {
+.header--nav ul {
     display: flex;
     justify-content: end;
     padding: 18px 50px 0 0;
 }
-nav ul li {
+.header--nav ul li {
     padding: 14px 30px;
     font-size: 16px;
 }
@@ -366,9 +445,10 @@ h1 {
 .contact--form {
     max-width: 1000px;
 }
-.contact--form dl label {
+.contact--form dl {
     display: flex;
     margin-bottom: 24px;
+    justify-content: center;
 }
 .contact--form dt {
     width: 20.2%;
@@ -378,11 +458,17 @@ h1 {
 }
 .contact--form dt span {
     font-size: 11px;
-    background-color: #f1e2da;
+    background-color: #ad8f86;
+    color: #fff;
     padding: 6px 10px;
     border-radius: 4px;
     margin-right: 13px;
 }
+.contact--form .contact--form__nini {
+    background-color: #f1e2da;
+    color: #ad8f86;
+}
+
 .contact--form__input {
     border: none;
     border-radius: 6px;
@@ -393,16 +479,62 @@ h1 {
     max-width: 495px;
     background: #fff;
     font-size: 14px;
+    color: #ad8f86;
+    box-sizing: border-box;
 }
 .contact--form__inputTextArea {
     border: none;
     border-radius: 6px;
     height: 150px;
     width: 100%;
+    padding-top: 1em;
     padding-left: 1em;
     padding-right: 1em;
     max-width: 495px;
     background: #fff;
     font-size: 14px;
+    color: #ad8f86;
+    box-sizing: border-box;
+}
+.contact--form__btn {
+    background: #ad8f86;
 }
 /* footer */
+#footer {
+    background: #ad8f86;
+    height: 254px;
+    margin-right: calc(50% -50vw);
+    margin-left: calc(50% -50vw);
+}
+.footer--contents {
+    display: flex;
+    padding-top: 70px;
+    margin-bottom: 45px;
+}
+.footer--contents__name p {
+    color: #fff;
+    font-size: 30px;
+    margin-right: 100px;
+}
+.footer--contents__nav li {
+    color: #fff;
+    padding-left: 1em;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.footer--contents__nav li:after {
+    position: absolute;
+    content: "";
+    bottom: 0.4em;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    transform: rotate(45deg);
+}
+.footer--contents__c {
+    color: #fff;
+    font-size: 8px;
+    text-align: center;
+}
