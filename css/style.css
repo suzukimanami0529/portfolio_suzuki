@@ -223,7 +223,10 @@ h1 {
     margin-left: calc(50% - 45vw);
 }
 /* works */
-
+.works--slider img {
+    border-radius: 10px;
+    width: 100%;
+}
 /* service */
 .service--contents {
     display: flex;
@@ -408,11 +411,11 @@ h1 {
 }
 .contact--form dl {
     display: flex;
-    margin-bottom: 24px;
+    margin-bottom: 30px;
     justify-content: center;
 }
 .contact--form dt {
-    width: 20.2%;
+    width: 28%;
 }
 .contact--form dd {
     width: 49.5%;
@@ -457,16 +460,16 @@ h1 {
     color: #ad8f86;
     box-sizing: border-box;
 }
-.contact--btn {
-    margin: 0 auto;
-}
 .contact--btn__btn {
+    display: block;
     background: #ad8f86;
     color: #fff;
+    letter-spacing: 0.1em;
     padding: 9px 30px;
     border-radius: 8px;
     box-shadow: -3px -3px 10px rgba(255, 255, 255, 0.1),
         3px 3px 10px rgba(0, 0, 0, 0.03);
+    margin: 0 auto;
 }
 /* footer */
 #footer {

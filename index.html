@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MANAMI PORTFOLIO</title>
     <meta name="description" content="すずきまなみポートフォリオ">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- 源ノ角ゴシック -->
     <script>
         (function (d) {
@@ -78,23 +78,23 @@
                     <h2><span></span>Works</h2>
                     <p>制作実績</p>
                 </div>
-                <div>
+                <div class="works--slider">
                     <div>
                         <picture>
                             <source srcset="" media="(max-width:767px)">
-                            <img src="" alt="">
+                            <img src="imges/works_01designcafe.jpg" alt="デザインカフェのホームページ実績">
                         </picture>
                     </div>
                     <div>
                         <picture>
                             <source srcset="" media="(max-width:767px)">
-                            <img src="" alt="">
+                            <img src="imges/works_01designcafe02.jpg" alt="デザインカフェのホームページ実績">
                         </picture>
                     </div>
                     <div>
                         <picture>
                             <source srcset="" media="(max-width:767px)">
-                            <img src="" alt="">
+                            <img src="imges/works_01designcafe03.jpg" alt="デザインカフェのホームページ実績">
                         </picture>
                     </div>
                 </div>
@@ -276,7 +276,17 @@
             <p class="footer--contents__c">©️Manami Suzuki</p>
         </footer>
     </div>
-
+    <script>
+        $(function () {
+            $('.works--slider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+            });
+        });
+    </script>
 
 </body>
 
