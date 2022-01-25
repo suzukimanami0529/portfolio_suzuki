@@ -35,9 +35,6 @@ a {
     color: inherit;
     transition: 0.3s;
 }
-a:hover {
-    opacity: 0.7;
-}
 ul {
     /*左の「・」を消す*/
     list-style: none;
@@ -150,20 +147,68 @@ h2 span::before {
     justify-content: end;
     padding: 18px 50px 0 0;
 }
-.header--nav ul li {
-    padding: 14px 30px;
+.header--nav ul li a {
     font-size: 16px;
+    padding: 14px 30px;
+    display: block;
+    position: relative;
+}
+.header--nav ul li a::after {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #ad8f86;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: transform 0.3s;
+}
+.header--nav ul li a:hover::after {
+    transform: scale(1, 1);
 }
 .header--contact {
-    color: #fff;
     background-color: #ad8f86;
     border-radius: 8px;
     box-shadow: -3px -3px 10px rgba(255, 255, 255, 0.1),
         3px 3px 10px rgba(0, 0, 0, 0.03);
+    position: relative;
+    width: 120px;
+    height: 44px;
+    text-align: center;
+    display: flex;
+}
+.header--contact__text {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    z-index: 10;
+}
+.header--contact__text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    display: block;
+    background: #f1e2da;
+    border-radius: 8px;
+    box-shadow: -3px -3px 10px rgba(255, 255, 255, 0.1),
+        3px 3px 10px rgba(0, 0, 0, 0.03);
+    z-index: -1;
+    transition: 0.2s;
+}
+.header--contact__text:hover {
+    color: #ad8f86;
+}
+.header--contact__text:hover::before {
+    width: 100%;
 }
 /* mainvisual */
 .mainvisual {
     display: flex;
+    margin-bottom: 80px;
 }
 .mainvisual--message {
     writing-mode: vertical-rl;
@@ -219,10 +264,26 @@ h1 {
     margin-bottom: 20px;
 }
 .about--background {
-    margin-right: calc(50% - 45vw);
-    margin-left: calc(50% - 45vw);
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
 }
+.about--background p {
+    font-size: 280px;
+    font-weight: 900;
+    color: #faf1ec;
+    text-align: center;
+    text-shadow: -3px -3px 20px rgba(255, 255, 255, 0.1),
+        3px 3px 20px rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+}
+
 /* works */
+.works--slider {
+    margin: calc(50% - 50vw);
+}
+.works--slider div {
+    padding: 0 20px;
+}
 .works--slider img {
     border-radius: 10px;
     width: 100%;
@@ -414,6 +475,9 @@ h1 {
     margin-bottom: 30px;
     justify-content: center;
 }
+.contact--form dl:last-of-type {
+    margin-bottom: 50px;
+}
 .contact--form dt {
     width: 28%;
 }
@@ -481,12 +545,13 @@ h1 {
 .footer--contents {
     display: flex;
     padding-top: 70px;
-    margin-bottom: 45px;
+    max-width: 1000px;
+    margin: 0 auto 45px auto;
 }
 .footer--contents__name p {
     color: #fff;
     font-size: 30px;
-    margin-right: 100px;
+    margin: 0 100px 0 35px;
 }
 .footer--contents__nav li {
     color: #fff;
@@ -509,4 +574,40 @@ h1 {
     color: #fff;
     font-size: 8px;
     text-align: center;
+}
+/* TOPに戻るボタン */
+.top p {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    font-size: 25px;
+    color: #ad8f86;
+    background-color: #f8ece5;
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: -3px -3px 10px rgba(255, 255, 255, 0.1),
+        3px 3px 10px rgba(0, 0, 0, 0.03);
+}
+
+/* Worksスライダー調整 */
+.slick-track {
+    margin-bottom: 34px;
+}
+.slick-dots {
+    bottom: -25px;
+}
+.slick-dots li button:before {
+    color: #fff;
+    opacity: 100%;
+}
+.slick-dots li.slick-active button:before {
+    color: #ad8f86;
+}
+.works--slider .slick-slide:not(.slick-center) {
+    -webkit-filter: opacity(50%);
+    -moz-filter: opacity(50%);
+    -o-filter: opacity(50%);
+    -ms-filter: opacity(50%);
+    filter: opacity(50%);
+    transition: 0.2s linear;
 }
