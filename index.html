@@ -29,27 +29,47 @@
 <body>
     <div>
         <header id="header">
-            <nav class="header--nav">
+            <div class="header">
+                <nav class="header--pcnav">
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#works">Works</a></li>
+                        <li><a href="#service">Service</a></li>
+                        <li class="header--contact"><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header--spbtn"><span></span></div>
+            <nav class="header--spnav">
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#works">Works</a></li>
                     <li><a href="#service">Service</a></li>
-                    <li><a href="#contact" class="header--contact"><span
-                                class="header--contact__text">Contact</span></a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
         <main>
-            <section>
+            <section id="mainvisual">
                 <div class="mainvisual">
-                    <div class="mainvisual--message">
-                        <img src="imges/pc_mainvisual_message.png" alt="想いを届けるお手伝いがしたい">
+                    <div class="mainvisual--message__sp">
+                        <p>想いを<br>届ける</p>
+                        <p>お手伝いがしたい</p>
                     </div>
                     <div class="mainvisual--manami">
                         <h1>
-                            <img src="imges/pc_mainvisual.png" alt="">
+                            <img src="imges/pc_mainvisual02.png" alt="manamiportfolio">
                         </h1>
                     </div>
+                    <div class="mainvisual--manami__sp">
+                        <h1>
+                            <img src="imges/sp_manamiPortfolio@2x.png" alt="manamiportfolio">
+                        </h1>
+                    </div>
+                </div>
+                <div class="scroll">
+                    <p class="scroll--text">scroll</p>
+                    <p class="scroll--yazirusi"></p>
                 </div>
             </section>
             <!-- about -->
@@ -279,13 +299,15 @@
             <p class="footer--contents__c">©️Manami Suzuki</p>
         </footer>
         <div class="top">
-            <a href="#header">
-                <p>↑</p>
-            </a>
+            <a href="#header">↑</a>
         </div>
     </div>
     <script>
         $(function () {
+            $('.header--spbtn,.header--spnav li').click(function () {
+                $('.header--spnav').fadeToggle();
+                $('.header--spbtn').toggleClass('open');
+            });
             $('a[href^="#"]').click(function () {
                 let speed = 500;
                 let type = "swing";
