@@ -69,7 +69,7 @@
                     </div>
                 </div>
                 <div class="scroll">
-                    <p class="scroll--text">scroll</p>
+                    <p class="scroll--text"><a href="#about">scroll</a></p>
                     <p class="scroll--yazirusi"></p>
                 </div>
             </section>
@@ -136,7 +136,7 @@
                 <div class="service--contents">
                     <div class="service--contents__design">
                         <div><img src="imges/service_design.png" alt=""></div>
-                        <p>デザイン</p>
+                        <h3>デザイン</h3>
                         <p>DESIGN</p>
                         <p>コーディングコーディングコーディングコーディングコーディングコーディングコーディングコーディングコーディングコーディングコーディングコーディングコーディングコーディングコーディングコーディング
                         </p>
@@ -145,7 +145,7 @@
                         <div>
                             <img src="imges/service_cording.png" alt="">
                         </div>
-                        <p>コーディング</p>
+                        <h3>コーディング</h3>
                         <p>CORDING</p>
                         <p>コーディングコーディングコーディングコーディングコーディングコーディングコーディングコーディングコーディングコーディングコーディングコーディングコーディングコーディングコーディングコーディング
                         </p>
@@ -154,7 +154,7 @@
                         <div>
                             <img src="imges/service_video.png" alt="">
                         </div>
-                        <p>動画編集</p>
+                        <h3>動画編集</h3>
                         <p>VIDEO EDITING</p>
                         <p>コーディングコーディングコーディングコーディングコーディングコーディングコーディングコーディングコーディングコーディングコーディングコーディングコーディングコーディングコーディングコーディング
                         </p>
@@ -316,25 +316,16 @@
                 $('.header--spbtn').toggleClass('open');
             });
             $('a[href^="#"]').click(function () {
+                let h = $('.header').outerHeight();
+                let adjust = h;
                 let speed = 500;
                 let type = "swing";
                 let href = $(this).attr("href");
                 let target = $(href == "#" || href == "" ? 'html' : href);
-                let position = target.offset().top;
+                let position = target.offset().top - adjust - 20;
                 $('html,body').animate({ scrollTop: position }, speed, type);
             });
         });
-        // $("document").ready(function () {
-        //     $('.works--slider').slick({
-        //         autoplay: true,
-        //         autoplaySpeed: 3000,
-        //         speed: 800,
-        //         dots: true,
-        //         arrows: false,
-        //         centerMode: true,
-        //         centerPadding: '15%'
-        //     });
-        // });
         function checkBreakPoint() {
             w = $(window).width();
             if (w > 767) {
@@ -351,7 +342,7 @@
                 });
             } else {
                 // スマホ向け
-                $('works--slider slick-initialized slick-slider slick-dotted').slick('unslick');
+                $('.works--slider .slick-initialized .slick-slider .slick-dotted').slick('unslick');
             }
         }
         // ウインドウがリサイズする度にチェック
