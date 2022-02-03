@@ -29,6 +29,9 @@ dd {
         "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana";
     font-feature-settings: "palt";
 }
+p {
+    font-weight: 300;
+}
 
 a {
     /*下線を消す*/
@@ -331,6 +334,9 @@ h2 span::before {
     display: flex;
     justify-content: space-between;
 }
+.service--contents > div {
+    width: 32%;
+}
 .service--contents__design img,
 .service--contents__cording img,
 .service--contents__editing img {
@@ -352,11 +358,11 @@ h2 span::before {
 .service--contents__cording div,
 .service--contents__editing div {
     background-color: #fff;
-    width: 70%;
+    width: 80%;
     border-radius: 50%;
     box-shadow: -3px -3px 10px rgba(255, 255, 255, 0.1),
         3px 3px 10px rgba(0, 0, 0, 0.03);
-    padding-top: 70%;
+    padding-top: 80%;
     margin: 0 auto 35px auto;
     position: relative;
 }
@@ -374,12 +380,12 @@ h2 span::before {
     color: #ad8f86;
     text-align: center;
     letter-spacing: 0.2em;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .service--contents__design p:last-of-type,
 .service--contents__cording p:last-of-type,
 .service--contents__editing p:last-of-type {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     line-height: 1.875;
 }
@@ -803,7 +809,7 @@ h2 span::before {
     }
     .mainvisual--message__sp {
         display: block;
-        margin: 60px 0 30px 0;
+        margin: 80px 0 40px 0;
         position: relative;
     }
     .mainvisual--message__sp p:nth-of-type(1) {
@@ -832,7 +838,7 @@ h2 span::before {
     .mainvisual--manami__sp {
         display: block;
         box-sizing: border-box;
-        margin: 0 8%;
+        margin: 0 8% 50px 8%;
     }
     .mainvisual--manami__sp img {
         width: 100%;
@@ -841,6 +847,7 @@ h2 span::before {
         padding: 0;
     }
     .scroll {
+        bottom: -30px;
         left: 8%;
     }
     /* about */
@@ -891,6 +898,9 @@ h2 span::before {
     /* service */
     .service--contents {
         display: block;
+    }
+    .service--contents > div {
+        width: 100%;
     }
     .service--contents__design div,
     .service--contents__cording div,
