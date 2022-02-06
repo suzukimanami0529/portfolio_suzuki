@@ -322,9 +322,6 @@ h2 span::before {
     margin-right: calc(50% - 50vw);
     margin-left: calc(50% - 50vw);
 }
-.works--slider div {
-    padding: 0 20px;
-}
 .works--slider img {
     border-radius: 10px;
     width: 100%;
